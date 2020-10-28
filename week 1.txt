@@ -1,0 +1,15 @@
+- construct the firebase server:
++ npm install -g firebase-tools
++ firebase login
++ firebase init => use cloud functions with nodejs and express
++ firebase deploy: deploy the server
++ using firestore in test mode: only 30 days allowed
+
+- testing the server connect:
++ create a posts collection in firestore database with 3 field: role, body (content of post), createdAt.
++ writing nodejs functions for testing server connection, npm install firebase-admin, npm install firestore.
++ using cmd: firebase deploy to deploy.
+return the url: https://us-central1-social-network-89dfa.cloudfunctions.net/api/...
++ use postman for testing
+
++ npm install express
