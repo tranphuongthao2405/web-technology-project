@@ -4,13 +4,14 @@
   flex-direction: column;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.75);
+  border: 1px solid lightgrey;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
   width: 100%;
 }
 
 .post__content {
   display: flex;
-  border-bottom: 1px solid #eff2f5;
+  border-bottom: 1px solid lightgrey;
   padding: 15px;
 }
 
@@ -42,7 +43,7 @@
 }
 
 .post__option {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   color: gray;
@@ -50,7 +51,7 @@
 }
 
 .post__option > h3 {
-  font-size: medium;
+  font-size: small;
   margin-left: 10px;
   cursor: pointer;
 }

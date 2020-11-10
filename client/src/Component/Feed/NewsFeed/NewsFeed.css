@@ -2,6 +2,7 @@
   width: 100%;
   margin-top: 15px;
   border-radius: 15px;
+  border: 1px solid lightgrey;
   background-color: white;
   box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
 }
@@ -27,9 +28,8 @@
 }
 
 .newsfeed__bottom {
-  margin-top: 10px;
   margin-bottom: 10px;
-  padding: 15px 25px;
+  padding: 10px 20px;
 }
 
 .newsfeed__image > img {
@@ -41,10 +41,10 @@
   border-top: 1px solid lightgray;
   display: flex;
   justify-content: space-evenly;
-  font-size: medium;
+  font-size: small;
   color: gray;
   cursor: pointer;
-  padding: 15px;
+  padding: 10px;
 }
 
 .newsfeed__option {
@@ -62,4 +62,5 @@
 .newsfeed__option:hover {
   background-color: #eff2f5;
   border-radius: 10px;
+  color: #2e81f4;
 }

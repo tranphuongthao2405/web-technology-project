@@ -8,13 +8,16 @@ import NearMeIcon from "@material-ui/icons/NearMe";
 import { ExpandMoreOutlined } from "@material-ui/icons";
 
 function NewsFeed({ profilePic, username, image, timestamp, message }) {
+  const seconds =
+    Math.floor(timestamp.nanoseconds / 1000000 / 60000) + timestamp.seconds;
+  const time = new Date(seconds * 1000).toUTCString();
   return (
     <div className="newsfeed">
       <div className="newsfeed__top">
         <Avatar src={profilePic} className="newsfeed__avatar" />
         <div className="newsfeed__topInfo">
           <h3>{username}</h3>
-          <p>{timestamp}</p>
+          <p>{time}</p>
         </div>
       </div>
 

@@ -4,7 +4,7 @@ import Story from "../Story/Story";
 
 function StoryBoard() {
   return (
-    <div class="storyBoard">
+    <div className="storyBoard">
       <Story
         image="https://images-na.ssl-images-amazon.com/images/I/91Ty3S%2BFprL._AC_SX522_.jpg"
         profileSrc="https://sewausa.org/resources/Sewa%20USA%20Images/Projects/Sewa%20Aspire/Volunteer%20list/9.png"
