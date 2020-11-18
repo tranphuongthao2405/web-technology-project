@@ -1,0 +1,25 @@
+.right__sidebarRow {
+  display: flex;
+  flex-direction: row;
+  margin-left: 16px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.right__sidebarRow:hover {
+  background-color: #2f3031;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.avatar {
+  height: 35px !important;
+  width: 35px !important;
+}
+
+.right__sidebarRow h1 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 5px;
+}

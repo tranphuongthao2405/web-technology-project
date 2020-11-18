@@ -1,0 +1,13 @@
+body {
+  background-color: #18191a;
+  overflow-x: hidden;
+}
+
+.app__mainpage {
+  display: flex;
+}
+
+.app__posts {
+  display: flex;
+  justify-content: center;
+}
