@@ -39,7 +39,7 @@
   height: 12px;
   background-position: -17px -1203px;
   vertical-align: -0.25em;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
 }
 

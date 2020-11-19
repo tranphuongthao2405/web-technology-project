@@ -62,7 +62,7 @@
   vertical-align: -0.1em;
   margin-left: 11px;
   margin-top: 12px;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
 }
 
@@ -72,7 +72,7 @@
   background-repeat: no-repeat;
   display: inline-block;
   height: 20px;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
   width: 25px;
   background-position: 0 -125px;
@@ -279,7 +279,7 @@ ul li a {
   display: inline-block;
   height: 20px;
   vertical-align: -0.1em;
-  -webkit-filter: invert(100%);
+  filter: invert(100%);
   width: 25px;
   background-position: 0 -1030px;
   margin-top: 10px;
@@ -422,7 +422,7 @@ ul li a {
   height: 20px;
   width: 25px;
   vertical-align: -0.1em;
-  -webkit-filter: invert(100%);
+  filter: invert(100%);
   background-position: 0 0;
   margin-top: 10px;
   margin-left: 10px;
@@ -463,14 +463,13 @@ ul li a {
 }
 
 .dropdownIcon.blue {
-  -webkit-filter: invert(40%) sepia(52%) saturate(200%) saturate(200%)
-    saturate(200%) saturate(189%) hue-rotate(191deg) brightness(103%)
-    contrast(102%);
+  filter: invert(40%) sepia(52%) saturate(200%) saturate(200%) saturate(200%)
+    saturate(189%) hue-rotate(191deg) brightness(103%) contrast(102%);
 }
 
 .logout {
   vertical-align: -0.1em;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
   background-position: 0 -1011px;
   background-image: url(https://facebook.com/rsrc.php/v3/y-/r/EOPZGFLdpJY.png);
@@ -490,7 +489,7 @@ ul li a {
 
 .darkMode {
   vertical-align: -0.1em;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
   background-position: 0 -1179px;
   background-image: url(https://facebook.com/rsrc.php/v3/y-/r/EOPZGFLdpJY.png);
@@ -503,7 +502,7 @@ ul li a {
 
 .helpAndSupport {
   vertical-align: -0.1em;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
   background-image: url(https://facebook.com/rsrc.php/v3/y-/r/EOPZGFLdpJY.png);
   background-size: 25px 2268px;
@@ -516,7 +515,7 @@ ul li a {
 
 .settings {
   vertical-align: -0.1em;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
   background-image: url(https://facebook.com/rsrc.php/v3/yH/r/hD_JBkCe96v.png);
   background-size: 33px 1483px;
@@ -557,7 +556,7 @@ ul li a {
 
 .feedback {
   vertical-align: -0.1em;
-  -webkit-filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
     brightness(90%) contrast(96%);
   background-position: 0 -717px;
   background-image: url(https://facebook.com/rsrc.php/v3/y-/r/EOPZGFLdpJY.png);

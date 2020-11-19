@@ -10,4 +10,9 @@ body {
 .app__posts {
   display: flex;
   justify-content: center;
+  margin-left: 1%;
+}
+
+.post {
+  border-radius: 15px;
 }

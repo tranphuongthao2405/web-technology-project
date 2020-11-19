@@ -32,19 +32,22 @@ function Posts({ user }) {
   return (
     <div className="posts">
       <UploadImage />
-      {user &&
-        posts.map(({ id, post }) => (
-          <Post
-            key={id}
-            postId={id}
-            user={user}
-            username={post.username}
-            caption={post.caption}
-            imageUrl={post.imageUrl}
-            noLikes={post.noLikes}
-            userId={post.uid}
-          />
-        ))}
+      <div className="post">
+        {user &&
+          posts.map(({ id, post }) => (
+            <Post
+              key={id}
+              postId={id}
+              user={user}
+              username={post.username}
+              caption={post.caption}
+              imageUrl={post.imageUrl}
+              noLikes={post.noLikes}
+              userId={post.uid}
+              timestamp={post.timestamp}
+            />
+          ))}
+      </div>
     </div>
   );
 }

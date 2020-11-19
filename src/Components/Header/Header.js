@@ -96,7 +96,6 @@ function Header({ user, selected }) {
               // eslint-disable-next-line array-callback-return
               snapshot2.docs.map((doc2) => {
                 console.log(doc2.data());
-                // only get comments of others
                 if (user && doc2.data().username !== user.displayName) {
                   dispatch({
                     type: "ADD_TO_NOTIFICATIONS",
