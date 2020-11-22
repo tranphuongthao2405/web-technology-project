@@ -6,7 +6,7 @@ import LeftSidebarRow from "./LeftSidebarRow/LeftSidebarRow";
 function LeftSidebar({ user }) {
   return (
     <div className="left__sidebar">
-      <Link to="/">
+      <Link to={`/${user?.displayName}/${user?.uid}`}>
         <LeftSidebarRow
           avatar
           imageLink={user?.photoURL}

@@ -32,7 +32,7 @@ function Posts({ user }) {
   return (
     <div className="posts">
       <UploadImage />
-      <div className="post">
+      <div className="post__content">
         {user &&
           posts.map(({ id, post }) => (
             <Post

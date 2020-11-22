@@ -166,7 +166,10 @@ function Header({ user, selected }) {
             {users !== undefined &&
               filteredUsers.map((userResp) => (
                 <li>
-                  <a onClick={collapseSearchBar} href="/">
+                  <a
+                    onClick={collapseSearchBar}
+                    href={`/${userResp?.displayName}/${userResp?.uid}`}
+                  >
                     <Avatar className="searchAvatar" src={userResp.photoURL} />
                     <h3 className="searchName">{userResp.displayName}</h3>
                   </a>
@@ -221,7 +224,7 @@ function Header({ user, selected }) {
 
       <div className="header__end__icons">
         <div className="round account">
-          <a href={`/${user && user.displayName}/${user && user.uid}`}>
+          <a href={`/${user?.displayName}/${user?.uid}`}>
             {user && (
               <Fragment>
                 <Avatar className="accountAvatar" src={user.photoURL} />
