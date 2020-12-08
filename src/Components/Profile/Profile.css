@@ -44,11 +44,13 @@
   text-align: center;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding: 10px;
 }
 
 .profileHeader {
   display: flex;
   flex-direction: column;
+  background-color: #3a3b3c;
 }
 
 .profileHeader button {
@@ -245,4 +247,8 @@
 .bioText {
   text-align: center;
   color: #aaadb2;
+}
+
+.post__content {
+  margin-top: 20px;
 }

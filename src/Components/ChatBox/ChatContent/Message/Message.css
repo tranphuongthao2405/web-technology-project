@@ -1,0 +1,66 @@
+.messages {
+  display: block;
+  flex-direction: column;
+  position: relative;
+}
+
+/* only message get scroll not header and sidebars*/
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+.sender .right__chat {
+  display: inline-block;
+  text-align: right;
+  background-color: #0084ff;
+  border-radius: 20px;
+  padding: 9px 10px 5px 10px;
+  margin: 5px;
+  font-size: small;
+  width: fit-content;
+  color: white;
+}
+
+.receiver .left__chat {
+  display: inline-block;
+  text-align: left;
+  background-color: #3a3b3c;
+  border-radius: 20px;
+  padding: 9px 10px 5px 10px;
+  margin: 5px;
+  font-size: small;
+  width: fit-content;
+  color: white;
+}
+
+.receiver .left__info {
+  display: flex;
+  padding: 8px 10px;
+}
+
+.receiver .left__info .receiverAvatar {
+  margin-right: 10px;
+}
+
+.receiver .left__info .receiverName {
+  display: flex;
+  color: white;
+  font-weight: 400;
+  font-size: small;
+  align-items: center;
+}
+
+.receiver {
+  display: flex;
+}
+
+.sender {
+  display: flex;
+}
+
+.sender .senderAvatar {
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}

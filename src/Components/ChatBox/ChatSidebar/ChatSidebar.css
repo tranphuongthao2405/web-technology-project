@@ -1,0 +1,44 @@
+.chat__sidebar {
+  flex: 0.25;
+}
+
+.chatTitle {
+  display: flex;
+  padding: 10px;
+}
+
+.chatTitle > p {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.searchBackIcon {
+  background-image: url(https://facebook.com/rsrc.php/v3/yy/r/b6UjiOJoi2u.png);
+  background-size: 25px 1035px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 25px;
+  filter: invert(62%) sepia(98%) saturate(12%) hue-rotate(175deg)
+    brightness(90%) contrast(96%);
+  width: 25px;
+  background-position: 0 -125px;
+  vertical-align: -0.1em;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.chatTitle > a {
+  transition: 0.2s;
+  border-radius: 30px;
+  width: 38px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.chatTitle > a:hover {
+  background-color: #3a3b3c;
+}

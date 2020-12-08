@@ -307,22 +307,24 @@ function Profile({ user }) {
           ) : (
             console.log()
           )}
-          {posts.map(({ id, post }) =>
-            post.username !== username ? (
-              console.log()
-            ) : (
-              <Post
-                key={id}
-                postId={id}
-                user={user}
-                username={post.username}
-                caption={post.caption}
-                imageUrl={post.imageUrl}
-                noLikes={post.noLikes}
-                postUserId={post.uid}
-              />
-            )
-          )}
+          <div className="post__content">
+            {posts.map(({ id, post }) =>
+              post.username !== username ? (
+                console.log()
+              ) : (
+                <Post
+                  key={id}
+                  postId={id}
+                  user={user}
+                  username={post.username}
+                  caption={post.caption}
+                  imageUrl={post.imageUrl}
+                  noLikes={post.noLikes}
+                  userId={post.uid}
+                />
+              )
+            )}
+          </div>
         </div>
       </div>
     </div>

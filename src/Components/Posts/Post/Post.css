@@ -227,6 +227,10 @@
 
 /* COMMENT REACTION */
 
+.post__form {
+  padding-bottom: 3px;
+}
+
 .comment {
   display: flex;
   flex-direction: row;
@@ -276,6 +280,7 @@
 .commentBox {
   display: flex;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .post__avatar2 {

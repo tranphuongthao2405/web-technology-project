@@ -11,16 +11,7 @@
   }
 }
 
-.posts {
-  overflow-y: scroll;
-}
-
 /* only posts get scroll not header and sidebars*/
 .posts::-webkit-scrollbar {
   display: none;
-}
-
-.posts {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }

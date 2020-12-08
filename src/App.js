@@ -9,6 +9,7 @@ import LeftSidebar from "./Components/Sidebar/LeftSidebar";
 import RightSidebar from "./Components/Sidebar/RightSidebar";
 import Posts from "./Components/Posts/Posts";
 import Profile from "./Components/Profile/Profile";
+import ChatBox from "./Components/ChatBox/ChatBox";
 
 function App() {
   const [user, setUser] = useState();
@@ -33,6 +34,10 @@ function App() {
 
           <Route path="/register">
             <Register />
+          </Route>
+
+          <Route exact path="/:username/chat">
+            <ChatBox user={user} />
           </Route>
 
           <Route exact path="/:username/:uid">

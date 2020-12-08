@@ -48,6 +48,7 @@ function Post({
           setComments(snapshot.docs.map((doc) => doc.data()));
         });
     }
+
     return () => {
       unsubscribe();
     };
@@ -142,7 +143,7 @@ function Post({
 
     db.collection("posts").doc(postId).collection("comments").add({
       text: comment,
-      username: postUser?.displayName,
+      username: user?.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       photoURL: user?.photoURL,
     });
@@ -153,15 +154,11 @@ function Post({
   return (
     <div className="post">
       <div className="post__header">
-        <Avatar
-          className="post__avatar"
-          alt=""
-          src={posterImage !== "" && posterImage}
-        />
+        <Avatar className="post__avatar" alt="" src={postUser?.photoURL} />
         <div className="post__headerInfo">
           <h3
             onClick={() => {
-              window.location.href = `/${username}/${user?.uid}`;
+              window.location.href = `/${username}/${postUser?.uid}`;
             }}
           >
             {username}
@@ -211,7 +208,7 @@ function Post({
         </div>
       </div>
 
-      <form onSubmit={postComment}>
+      <form className="post__form" onSubmit={postComment}>
         <div className="commentBox">
           <Avatar className="post__avatar2" alt="" src={user?.photoURL} />
           <input
@@ -234,7 +231,7 @@ function Post({
         comments.map((comment) => (
           <div
             className={`comments__show ${
-              comment.username === postUser?.displayName && "myself"
+              comment.username === user?.displayName && "myself"
             }`}
           >
             <Avatar

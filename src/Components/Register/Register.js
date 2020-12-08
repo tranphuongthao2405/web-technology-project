@@ -47,7 +47,7 @@ function Register() {
                   bio: "",
                 })
                 .then((res) => {
-                  history.push("/");
+                  history.push("/login");
                 });
             });
         }

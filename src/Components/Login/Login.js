@@ -13,6 +13,7 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
+        localStorage.setItem("userId", auth.user.uid);
         history.push("/");
       })
       .catch((err) => {
@@ -20,7 +21,9 @@ function Login() {
           err.message ===
           "The password is invalid or the user does not have a password."
         ) {
-          alert("Please fill out all the fields");
+          alert(
+            "Your credentials are wrong or you have not fill out all the fields."
+          );
         } else if (
           err.message ===
           "There is no user record corresponding to this identifier. The user may have been deleted."

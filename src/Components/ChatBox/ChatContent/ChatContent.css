@@ -1,0 +1,64 @@
+.chat__content {
+  flex: 0.7;
+  background-color: #242526;
+  border-radius: 10px;
+  margin-top: 15px;
+  position: relative;
+  height: 88vh;
+}
+
+.chat__content .messageTitle {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.messageInput {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.sendIcon {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.2s;
+  border-radius: 30px;
+  width: 38px;
+  cursor: pointer;
+}
+
+.messageInput .sendIcon :hover {
+  background-color: #3a3b3c;
+}
+
+.messageInput input {
+  border-radius: 20px;
+  outline: none;
+  background-color: #3a3b3c;
+  height: 27px !important;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 15px;
+  color: #e4e6eb;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.messageInput input::-webkit-input-placeholder {
+  color: #9c9fa3;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.transparent__submit {
+  display: none;
+}
