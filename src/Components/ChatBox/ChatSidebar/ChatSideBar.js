@@ -8,14 +8,16 @@ function ChatSideBar({ user, handleSelect }) {
   const history = useHistory();
   const [users, setUsers] = useState();
 
-  if (user === false) {
+  if (user === false || !localStorage.userId) {
     history.push("/login");
   }
 
   // query all  users except current user for showing in row
   useEffect(() => {
     db.collection("users").onSnapshot((snapshot) => {
-      setUsers(snapshot.docs.map((doc) => doc.data()));
+      let data = snapshot.docs.map((doc) => doc.data());
+      data = data.filter((dataUser) => dataUser.uid !== user.uid);
+      setUsers(data);
     });
   }, []);
 
@@ -28,10 +30,10 @@ function ChatSideBar({ user, handleSelect }) {
         <p>Chat Box</p>
       </div>
       {users !== undefined &&
-        users.map((user) => (
+        users.map((u) => (
           <ChatSidebarRow
-            key={user?.uid}
-            userSelected={user}
+            key={u.uid}
+            userSelected={u}
             handleSelect={handleSelect}
           />
         ))}

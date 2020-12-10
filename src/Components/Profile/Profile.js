@@ -10,6 +10,7 @@ import Post from "../Posts/Post/Post";
 import ProfileSidebar from "./ProfileSidebar/ProfileSidebar";
 
 function Profile({ user }) {
+  const history = useHistory();
   // get parameters from url
   const { username, uid } = useParams();
   const [open, setOpen] = useState(false);
@@ -23,6 +24,10 @@ function Profile({ user }) {
   // previous bio and current bio when have changes
   const [bio, setBio] = useState("");
   const [bioPresent, setBioPresent] = useState(false);
+
+  if (user === false || !localStorage.userId) {
+    history.push("/login");
+  }
 
   // get current user
   const currentUser = firebase.auth().currentUser;
@@ -321,6 +326,7 @@ function Profile({ user }) {
                   imageUrl={post.imageUrl}
                   noLikes={post.noLikes}
                   userId={post.uid}
+                  timestamp={post.timestamp}
                 />
               )
             )}

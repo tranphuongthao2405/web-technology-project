@@ -26,7 +26,7 @@ function Message({ senderId, receiverId, text }) {
       {userId === receiverId && receiver === senderId ? (
         <div className="receiver">
           <div className="left__info">
-            <a href={`/${receiverName}/${receiverId}`}>
+            <a href={`/${receiverName}/${receiver}`}>
               <Avatar
                 className="receiverAvatar"
                 src={receiverAvatar}

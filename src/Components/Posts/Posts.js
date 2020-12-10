@@ -11,7 +11,7 @@ function Posts({ user }) {
 
   document.title = "Facebook";
 
-  if (user === false) {
+  if (user === false || !localStorage.userId) {
     history.push("/login");
   }
 

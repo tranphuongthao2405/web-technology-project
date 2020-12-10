@@ -15,7 +15,7 @@ function Header({ user, selected }) {
   const [isNotificationOpen, setNotificationsOpen] = useState(false);
   const [isProfileDown, setProfileDown] = useState(false);
 
-  if (user === false) {
+  if (user === false || !localStorage.userId) {
     history.push("/login");
   }
 

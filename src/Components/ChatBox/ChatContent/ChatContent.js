@@ -11,7 +11,7 @@ function ChatContent({ user, userSelected }) {
   const [message, setMessage] = useState();
   const history = useHistory();
 
-  if (user === false) {
+  if (user === false || !localStorage.userId) {
     history.push("/login");
   }
 
