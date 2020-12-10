@@ -16,10 +16,11 @@ function ChatSideBar({ user, handleSelect }) {
   useEffect(() => {
     db.collection("users").onSnapshot((snapshot) => {
       let data = snapshot.docs.map((doc) => doc.data());
-      data = data.filter((dataUser) => dataUser.uid !== user.uid);
+      data = data.filter((dataUser) => dataUser.uid !== user?.uid);
       setUsers(data);
     });
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.uid]);
 
   return (
     <div className="chat__sidebar">

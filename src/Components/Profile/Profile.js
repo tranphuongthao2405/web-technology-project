@@ -28,7 +28,6 @@ function Profile({ user }) {
   if (user === false || !localStorage.userId) {
     history.push("/login");
   }
-
   // get current user
   const currentUser = firebase.auth().currentUser;
 
@@ -305,7 +304,7 @@ function Profile({ user }) {
         </div>
       </div>
       <div className="postsAndIntro">
-        <ProfileSidebar username={username} />
+        <ProfileSidebar uid={uid} />
         <div className="postAndWatch">
           {username === user?.displayName ? (
             <ImageUpload username={username} />
@@ -314,7 +313,7 @@ function Profile({ user }) {
           )}
           <div className="post__content">
             {posts.map(({ id, post }) =>
-              post.username !== username ? (
+              post.uid !== uid ? (
                 console.log()
               ) : (
                 <Post

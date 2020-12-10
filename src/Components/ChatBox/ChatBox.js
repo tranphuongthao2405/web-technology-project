@@ -3,10 +3,16 @@ import "./ChatBox.css";
 import ChatContent from "./ChatContent/ChatContent";
 import ChatSideBar from "./ChatSidebar/ChatSideBar";
 import Header from "../Header/Header";
+import { useHistory } from "react-router-dom";
 
 function ChatBox({ user }) {
   const [chatOpen, setChatOpen] = useState(false);
   const [userSelected, setUserSelected] = useState();
+  const history = useHistory();
+
+  if (user === false || !localStorage.userId) {
+    history.push("/login");
+  }
 
   const handleOpenMessage = (userSelected) => {
     setUserSelected(userSelected);

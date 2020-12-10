@@ -46,10 +46,9 @@ function Header({ user, selected }) {
     });
 
     if (users !== undefined) {
-      const searchUsers = users.filter((user) => {
+      const searchUsers = users.filter((u) => {
         return (
-          user?.displayName.toLowerCase().indexOf(searchTerm.toLowerCase()) !==
-          -1
+          u.displayName.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
         );
       });
 
@@ -132,6 +131,7 @@ function Header({ user, selected }) {
   const logout = () => {
     if (user) {
       auth.signOut();
+      localStorage.clear();
       history.push("/login");
     }
   };

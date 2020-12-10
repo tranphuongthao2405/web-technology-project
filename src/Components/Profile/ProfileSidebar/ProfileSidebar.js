@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./ProfileSidebar.css";
 import { db } from "../../../Firebase/Firebase";
 
-function ProfileSidebar({ username }) {
+function ProfileSidebar({ uid }) {
   var [nposts, setNPosts] = useState([]);
   const [currentUserData, setCurrentUserData] = useState();
   const birthday = new Date(currentUserData?.birthday.toDate());
@@ -15,8 +15,8 @@ function ProfileSidebar({ username }) {
     db.collection("posts").onSnapshot((snapshot) => {
       // eslint-disable-next-line array-callback-return
       snapshot.docs.map((doc) => {
-        // only get posts with the same username
-        if (doc.data().username === username) {
+        // only get posts with the same user id
+        if (doc.data().uid === uid) {
           // get all the imageurl - 9 photos
           if (nposts.length !== 9) {
             // check for duplicate url
@@ -33,7 +33,7 @@ function ProfileSidebar({ username }) {
     db.collection("users").onSnapshot((snapshot) => {
       // eslint-disable-next-line array-callback-return
       snapshot.docs.map((doc) => {
-        if (doc.data().displayName === username) {
+        if (doc.data().uid === uid) {
           setCurrentUserData(doc.data());
         }
       });
