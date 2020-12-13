@@ -9,12 +9,14 @@ import { getYear } from "date-fns";
 
 function Register() {
   const history = useHistory();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const [birthday, setBirthday] = useState(new Date());
-  const [gender, setGender] = useState("");
+  const [gender, setGender] = useState();
+
+  console.log(gender);
 
   const register = (event) => {
     event.preventDefault();
@@ -23,6 +25,18 @@ function Register() {
         "You are not old enough to register to Facebook. You must be equal or greater than 13 years old."
       );
     }
+
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !password ||
+      !birthday ||
+      !gender
+    ) {
+      alert("You have to fill out all the fields to register an account!");
+    }
+
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
