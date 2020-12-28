@@ -5,6 +5,7 @@ import { db } from "../../../Firebase/Firebase";
 import Message from "./Message/Message";
 import { useHistory } from "react-router-dom";
 import firebase from "firebase";
+import { Avatar } from "@material-ui/core";
 
 function ChatContent({ user, userSelected }) {
   const [messages, setMessages] = useState([]);
@@ -64,38 +65,50 @@ function ChatContent({ user, userSelected }) {
   return (
     <>
       <div className="chat__content">
-        <p className="messageTitle">Chat Message</p>
-
-        <div className="messages">
-          {messages.map((mes) => (
-            <Message
-              key={`${mes.senderId}${mes.timestamp}`}
-              senderId={mes.senderId}
-              receiverId={mes.receiverId}
-              text={mes.text}
-              timestamp={mes.timestamp}
+        <div className="messageTitle">
+          <a href={`/${userSelected.displayName}/${userSelected.uid}`}>
+            <Avatar
+              className="titleAvatar"
+              src={userSelected.photoURL}
+              alt="avatar"
             />
-          ))}
+          </a>
+          <a href={`/${userSelected.displayName}/${userSelected.uid}`}>
+            <p className="titleName">{userSelected.displayName}</p>
+          </a>
         </div>
-
-        <form className="messageInput" onSubmit={postMessage}>
-          <input
-            type="text"
-            placeholder="Write message..."
-            value={message}
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-          />
-          <input
-            type="submit"
-            disabled={!message}
-            className="transparent__submit"
-          />
-          <div className="sendIcon" onClick={postMessage}>
-            <Send color="primary" />
+        <div className="messageForm">
+          <div className="messages">
+            {messages.map((mes) => (
+              <Message
+                key={`${mes.senderId}${mes.timestamp}`}
+                senderId={mes.senderId}
+                receiverId={mes.receiverId}
+                text={mes.text}
+                timestamp={mes.timestamp}
+              />
+            ))}
           </div>
-        </form>
+
+          <form className="messageInput" onSubmit={postMessage}>
+            <input
+              type="text"
+              placeholder="Write message..."
+              value={message}
+              onChange={(e) => {
+                setMessage(e.target.value);
+              }}
+            />
+            <input
+              type="submit"
+              disabled={!message}
+              className="transparent__submit"
+            />
+            <div className="sendIcon" onClick={postMessage}>
+              <Send color="primary" />
+            </div>
+          </form>
+        </div>
       </div>
     </>
   );

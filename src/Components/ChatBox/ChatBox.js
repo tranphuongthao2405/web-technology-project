@@ -20,7 +20,7 @@ function ChatBox({ user }) {
   };
 
   return (
-    <div>
+    <div className="boxchat">
       <Header user={user} />
       <div className="chatbox">
         <ChatSideBar user={user} handleSelect={handleOpenMessage} />

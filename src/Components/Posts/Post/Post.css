@@ -1,6 +1,6 @@
 .post {
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   background-color: rgb(36, 37, 38);
   margin-bottom: 45px;
 }
@@ -30,7 +30,9 @@
   color: #fff;
   cursor: pointer;
 }
-
+.post__header > .post__headerInfo > h3:hover {
+  text-decoration: underline;
+}
 .post__header .post__headerInfo > p {
   color: #fff;
   font-size: 12px;
@@ -124,6 +126,7 @@
   justify-content: center;
   padding-top: 6px;
   color: #9a9da1;
+  margin: auto;
 }
 
 .like:hover {
@@ -194,6 +197,7 @@
   width: 150px;
   justify-content: center;
   padding-top: 6px;
+  margin: auto;
 }
 
 .share > h3 {
@@ -238,6 +242,7 @@
   width: 150px;
   justify-content: center;
   padding-top: 6px;
+  margin: auto;
 }
 
 .comment:hover {
@@ -302,14 +307,14 @@
   outline: none;
   background-color: #3a3b3c;
   height: 27px !important;
-  width: 417px;
+  width: 100%;
   border: none;
   padding: 5px;
   color: #fff;
   font-size: 14px;
   padding-left: 15px;
   color: #e4e6eb;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .commentInputBox::-webkit-input-placeholder {
@@ -333,8 +338,9 @@
   background-color: #3a3b3c;
   border-radius: 15px;
   height: auto;
-  width: 300px;
+  /* width: 100%; */
   margin-bottom: 20px;
+  /* margin-right: 50px; */
 }
 
 .comments__show .container__comments p span {

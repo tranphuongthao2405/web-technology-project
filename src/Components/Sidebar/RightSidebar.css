@@ -1,19 +1,22 @@
 .right__sidebar {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   width: 100%;
   margin-left: 20%;
-  margin-top: 20px;
+  margin-top: 20px; */
+
+  max-width: 350px;
+  /* width: 100%; */
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .right__sidebar {
-    margin-left: 0;
+    display: none;
   }
 }
 
 .contacts {
-  margin-top: 10px;
+  margin: 10px 0px 0px 10px;
 }
 
 .hr {
@@ -38,7 +41,7 @@ h1 {
   background-repeat: no-repeat;
   width: 16px;
   cursor: pointer;
-  margin-left: 190px;
+  margin-left: auto;
   height: 16px;
   background-position: 0 -1398px;
   vertical-align: -0.25em;
@@ -51,6 +54,7 @@ h1 {
   background-size: 33px 1483px;
   background-repeat: no-repeat;
   width: 16px;
+  margin-right: 20px;
   float: right;
   height: 16px;
   cursor: pointer;
@@ -66,8 +70,8 @@ h1 {
   flex-direction: row;
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .right__sidebar {
     display: none;
   }
-}
+} */

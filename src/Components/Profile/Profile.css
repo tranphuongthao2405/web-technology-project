@@ -5,16 +5,20 @@
 
 .profile__coverPhoto {
   background-color: #18191a;
-  margin-left: 15%;
-  margin-right: 15%;
+  /* margin-left: 15%;
+  margin-right: 15%; */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding-top: 190px;
   z-index: 0;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
 }
 
 .profileAvatar {
-  margin-left: 42%;
+  margin-left: auto;
+  margin-right: auto;
   height: 160px !important;
   width: 160px !important;
   border: 5px solid #242526;
@@ -106,26 +110,31 @@
 
 .hr4 {
   height: 1px;
-  width: 100%;
+  max-width: 1000px;
   background-color: #3e4042;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin: auto;
 }
 
 .profileHeader__options {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
 }
-
+.profileHeader__left {
+  width: 100%;
+}
 .profileHeader__left ul {
   display: flex;
   flex-direction: row;
-  height: 55px;
+  /* height: 55px; */
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 .profileHeader__left ul li {
-  margin: 0px;
+  margin: 10px 10px 0px 10px;
   font-size: 15px;
   color: #b0b3b8;
   font-weight: 600;
@@ -140,7 +149,11 @@
   color: #2e89ff;
   border-radius: 0px !important;
   border-bottom: 3px solid #2e89ff;
-  margin-left: 35%;
+  /* margin-left: 35%; */
+}
+
+.editProfile {
+  /* width: 100%; */
 }
 
 .profileHeader__left ul .selected:hover {
@@ -175,13 +188,25 @@
 .postsAndIntro {
   display: flex;
   flex-direction: row;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .postsAndIntro {
+    flex-direction: column;
+  }
+  .profileSidebar {
+    width: 100% !important;
+  }
 }
 
 .postAndWatch {
   display: flex;
   flex-direction: column;
-  flex: 0.6;
+  /* flex: 0.6; */
   margin-left: 20px;
+  width: 100%;
 }
 
 .bioFields {

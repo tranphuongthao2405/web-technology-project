@@ -289,7 +289,10 @@ function Header({ user, selected }) {
         </div>
 
         <div className="round" onClick={renderDropdownOptions}>
+          {/* <div className="round1"> */}
           <i className={`dropdownIcon ${isProfileDown === true && "blue"}`} />
+          {/* </div> */}
+
           <div className="dropdown__options">
             <a href="#">
               <div className="optionDrop">

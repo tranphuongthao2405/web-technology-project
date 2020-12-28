@@ -1,5 +1,25 @@
 .chat__sidebar {
   flex: 0.25;
+  overflow-y: auto;
+}
+
+.chat__sidebar::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.chat__sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.chat__sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.chat__sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .chatTitle {

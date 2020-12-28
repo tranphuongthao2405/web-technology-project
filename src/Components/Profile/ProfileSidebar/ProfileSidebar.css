@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  flex: 0.4;
+  /* flex: 0.4; */
   margin-bottom: 30px;
+  width: 500px;
 }
 
 .photos {
@@ -15,7 +16,7 @@
 .posts2 {
   background-color: #242526;
   border-radius: 10px;
-  margin-left: 40%;
+  /* margin-left: 40%; */
   margin-bottom: 10px;
 }
 
@@ -33,11 +34,11 @@
 }
 
 .policies.profile {
-  margin-left: 48%;
+  /* margin-left: 48%; */
 }
 
 .hr.profile {
-  margin-left: 42%;
+  /* margin-left: 42%; */
 }
 
 .photos img {

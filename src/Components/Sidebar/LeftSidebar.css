@@ -1,6 +1,15 @@
 .left__sidebar {
-  flex: 0.2;
-  margin-top: 20px;
+  /* flex: 0.2;
+  margin-top: 20px; */
+
+  /* width: 100%; */
+  max-width: 350px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .left__sidebar {
+    display: none;
+  }
 }
 
 .left__sidebar .hr {
@@ -43,8 +52,8 @@
     brightness(90%) contrast(96%);
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .left__sidebar {
     display: none;
   }
-}
+} */

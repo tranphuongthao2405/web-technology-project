@@ -33,7 +33,6 @@ function Message({ senderId, receiverId, text }) {
                 alt="avatar"
               />
             </a>
-            <p className="receiverName">{receiverName}</p>
           </div>
           <div className="left__chat">{text}</div>
         </div>
